@@ -1,0 +1,47 @@
+{
+  "name": "uwarp-palette",
+  "version": "0.1.0",
+  "description": "Generate practical color palettes and Tailwind-friendly scales from a seed hex",
+  "license": "MIT",
+  "author": "Sherotree",
+  "homepage": "https://www.uwarp.design/tools/color",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sherotree/uwarp-packages.git",
+    "directory": "packages/palette"
+  },
+  "bugs": {
+    "url": "https://github.com/sherotree/uwarp-packages/issues"
+  },
+  "keywords": [
+    "palette",
+    "color",
+    "tailwind",
+    "design-tokens",
+    "uwarp"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run"
+  },
+  "sideEffects": false
+}

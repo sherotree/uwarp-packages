@@ -1,0 +1,50 @@
+{
+  "name": "uwarp-ttf-to-woff2",
+  "version": "0.1.0",
+  "description": "Browser-friendly TTF/OTF to WOFF2 conversion via WebAssembly (Node and bundlers)",
+  "license": "MIT",
+  "author": "Sherotree",
+  "homepage": "https://www.uwarp.design/ttf-to-woff2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sherotree/uwarp-packages.git",
+    "directory": "packages/ttf-to-woff2"
+  },
+  "bugs": {
+    "url": "https://github.com/sherotree/uwarp-packages/issues"
+  },
+  "keywords": [
+    "woff2",
+    "ttf",
+    "otf",
+    "font",
+    "wasm",
+    "uwarp"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "wawoff2": "^2.0.1"
+  },
+  "sideEffects": false
+}
